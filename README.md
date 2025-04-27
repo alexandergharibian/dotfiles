@@ -67,7 +67,7 @@ This process will set up your environment with the configurations specified in t
 
 ## Requirements
 
-- macOS
+- macOS/linux
 - Zsh
 - Git
 - Vim
