@@ -57,8 +57,9 @@
 [fetch]
   prune = true
 
-[branch "master"]
-  pushRemote = no_push
-
-[branch "main"]
-  pushRemote = no_push
+# Forbid myself to push to master
+#[branch "master"]
+#  pushRemote = no_push
+#
+#[branch "main"]
+#  pushRemote = no_push
