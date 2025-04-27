@@ -1,0 +1,64 @@
+[user]
+  name = Alex Gharibian
+  email = agharibian@spotify.com
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = auto
+  pager = true
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[core]
+  pager = less -iXfr
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  excludesfile = ~/.gitignore
+  editor = "vim"
+
+[alias]
+  co = checkout
+  cm = commit
+  br = branch
+  st = status
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset (%aN <%aE>)' --abbrev-commit --date=relative
+  personal = config user.email \"alexandergharibian@gmail.com\"
+  spotify = config user.email agharibian@spotify.com
+
+[diff "odf"]
+  textconv=odt2txt
+[filter "opendocument"]
+  clean = "rezip -p ODF_UNCOMPRESS"
+  smudge = "rezip -p ODF_COMPRESS"
+
+[push]
+  default = simple
+  autoSetupRemote = true
+
+[pager]
+  branch = false
+
+[fetch]
+  prune = true
+
+[branch "master"]
+  pushRemote = no_push
+
+[branch "main"]
+  pushRemote = no_push
