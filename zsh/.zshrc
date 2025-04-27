@@ -26,6 +26,9 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 if [[ -f /opt/homebrew/opt/antidote/share/antidote/antidote.zsh ]]; then
   source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
   antidote load
+elif [[ -f /usr/local/opt/antidote/share/antidote/antidote.zsh ]]; then
+  source /usr/local/opt/antidote/share/antidote/antidote.zsh
+  antidote load
 else
   echo "Warning: Antidote not found. Please install it with 'brew install antidote'"
 fi
