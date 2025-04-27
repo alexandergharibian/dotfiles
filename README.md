@@ -72,7 +72,3 @@ This process will set up your environment with the configurations specified in t
 - Git
 - Vim
 - iTerm2
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
