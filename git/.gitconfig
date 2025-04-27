@@ -1,6 +1,6 @@
 [user]
-  name = Alex Gharibian
-  email = agharibian@spotify.com
+  name = Alexander Gharibian
+  email = alexandergharibian@gmail.com
 
 [color]
   diff = auto
@@ -39,7 +39,6 @@
   st = status
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset (%aN <%aE>)' --abbrev-commit --date=relative
   personal = config user.email \"alexandergharibian@gmail.com\"
-  spotify = config user.email agharibian@spotify.com
 
 [diff "odf"]
   textconv=odt2txt
