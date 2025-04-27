@@ -21,13 +21,24 @@ This repository contains my personal dotfiles and configuration files for variou
 
 ## Installation
 
-To install these dotfiles, run:
+To install these dotfiles, follow these steps:
 
-```bash
-./install.sh
-```
+1. **Clone the Repository**: Open your terminal and run the following command to clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/alexandergharibian/dotfiles.git
+   ```
 
-This will create symbolic links from your home directory to the configuration files in this repository.
+2. **Navigate to the Directory**: Change into the newly cloned directory:
+   ```bash
+   cd dotfiles/
+   ```
+
+3. **Run the Installation Script**: Execute the installation script to create symbolic links from your home directory to the configuration files in this repository:
+   ```bash
+   ./install.sh
+   ```
+
+This process will set up your environment with the configurations specified in this repository. Make sure you have the necessary permissions to create symbolic links in your home directory.
 
 ## Features
 
