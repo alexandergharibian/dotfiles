@@ -90,3 +90,6 @@ setopt GLOB_COMPLETE
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 alias zcompile='zcompile ~/.zshrc'
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
