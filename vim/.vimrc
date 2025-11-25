@@ -59,6 +59,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'flazz/vim-colorschemes'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 colorscheme jellybeans
 let g:airline_theme='onehalfdark'
