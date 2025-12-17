@@ -39,6 +39,25 @@
   st = status
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset (%aN <%aE>)' --abbrev-commit --date=relative
   personal = config user.email \"alexandergharibian@gmail.com\"
+  tidy = "!git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs -r git branch -D"
+  brs = "!f() { \
+        git branch --sort=-committerdate --format='%(refname:short)' | \
+        fzf --height=40% --reverse --info=inline \
+        --preview 'git log -1 --color=always --pretty=format:\"%C(yellow)%h%C(reset) %C(blue)%ci%C(reset) %C(bold green)%an%C(reset)%n%C(white)%s%C(reset) %C(dim white)%d%C(reset) %n %n %C(reset)%b\" {}' | \
+        xargs -r git checkout; \
+    }; f"
+  abrs = "!f() { \
+    sel=$(git branch -a --sort=-committerdate --format='%(refname:short)' | \
+      fzf --height=40% --reverse --info=inline \
+      --preview 'git log -1 --color=always --pretty=format:\"%C(yellow)%h%C(reset) %C(blue)%ci%C(reset) %C(bold green)%an%C(reset)%n%C(white)%s%C(reset) %C(dim white)%d%C(reset) %n %n %C(reset)%b\" {}'); \
+    [ -z \"$sel\" ] && exit 0; \
+    if [[ \"$sel\" == origin/* ]]; then \
+      bn=${sel#origin/}; \
+      git switch -c \"$bn\" --track \"$sel\" 2>/dev/null || git switch \"$bn\"; \
+    else \
+      git switch \"$sel\"; \
+    fi; \
+  }; f"
 
 [diff "odf"]
   textconv=odt2txt
