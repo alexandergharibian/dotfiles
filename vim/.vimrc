@@ -64,3 +64,4 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 colorscheme jellybeans
 let g:airline_theme='onehalfdark'
+

@@ -39,7 +39,7 @@
   st = status
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset (%aN <%aE>)' --abbrev-commit --date=relative
   personal = config user.email \"alexandergharibian@gmail.com\"
-  tidy = "!git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs -r git branch -D"
+  tidy = "!git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs -r git branch -d"
   brs = "!f() { \
         git branch --sort=-committerdate --format='%(refname:short)' | \
         fzf --height=40% --reverse --info=inline \
